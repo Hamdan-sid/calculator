@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <style>
+        #alert{background-color: rgb(32, 6, 6);
+        color: white;
+    border: 2px solid black;
+border-radius: 5px;}
+#sum{
+    background-color: rgb(107, 173, 20);
+    color: white;
+}
+#minus{
+    background-color: rgb(196, 53, 119);
+    color: white;
+}
+#divide{
+    background-color: rgb(255, 0, 255);
+    color: white;
+}
+#multiply{
+    background-color: blue;
+    color: white;
+}
+#nameContainer{
+    
+    background-color: rgb(25, 26, 23);
+            color:rgb(31, 27, 27);
+            font-size: 50px;
+            width: 120px;
+            text-align: center;
+
+
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Functions</h1>
+<button onclick="myFunction()" id="alert">Show Alert</button>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<label for="num1">
+    Value 1: <input type="number" id="num1">
+</label>
+<br>
+<label for="num2">
+    Value 2: <input type="number" id="num2">
+</label>
+<br>
+<button onclick="sum()" id="sum">Plus</button>
+<br>
+<br>
+<button onclick="minus()" id="minus">Minus</button>
+<br><br>
+<button onclick="divide()" id="divide">Divide</button>
+<br><br>
+<button onclick="multiply()" id="multiply">Multiply</button>
+<br>
+<br>
+<div id="nameContainer"></div>
+
+
+
+
+    <script>
+function myFunction()
+{
+    console.log("This is fucntion");
+ alert ("This is function");
+ }
+
+ function sum(){
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
+
+            document.getElementById("nameContainer").innerText = num1 + num2;
+        }
+
+        function minus(){
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
+
+            document.getElementById("nameContainer").innerText = num1 - num2;
+        }
+
+        function divide(){
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
+
+            document.getElementById("nameContainer").innerText = num1 % num2;
+        }
+
+        function multiply(){
+            let num1 = Number(document.getElementById("num1").value)
+            let num2 = Number(document.getElementById("num2").value)
+
+            document.getElementById("nameContainer").innerText = num1 * num2;
+        }
+
+    </script>
+</body>
+</html>
